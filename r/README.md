@@ -3,7 +3,7 @@
 Lightweight R package for shared functions. Load during development with:
 
 ```r
-devtools::load_all("/path/to/lab-common/r")
+devtools::load_all("/path/to/cognizelab-core/r")
 ```
 
 Once you have real functions, run `devtools::document()` to regenerate

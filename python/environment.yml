@@ -1,4 +1,4 @@
-name: labcommon
+name: cognizelabcore
 channels:
   - conda-forge
 dependencies:

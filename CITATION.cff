@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "lab-common: shared analysis utilities"
+title: "cognizelab-core: shared analysis utilities"
 type: software
 authors:
   - family-names: "<Your last name>"
     given-names: "Deniz"
     orcid: "https://orcid.org/0000-0000-0000-0000"   # fill in your ORCID
-    affiliation: "<Your institution / lab name>"
-repository-code: "https://github.com/<your-github-username>/lab-common"
+    affiliation: "CognizeLab"
+repository-code: "https://github.com/cognizelab/cognizelab-core"
 license: MIT
 version: 0.1.0
 date-released: "2026-07-03"

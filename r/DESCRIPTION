@@ -1,4 +1,4 @@
-Package: labcommon
+Package: cognizelabcore
 Title: Shared Analysis Utilities for Lab Projects
 Version: 0.1.0
 Authors@R: person("Deniz", role = c("aut", "cre"), email = "denizvat7@gmail.com")

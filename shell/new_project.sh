@@ -1,32 +1,34 @@
 #!/bin/bash
-# new_project.sh <project-name> [github-username]
+# new_project.sh <project-name> [github-username-or-org]
 #
 # Bootstraps a new project repo from project-template:
-#   1. Copies ../../project-template into ../../<project-name> (siblings of lab-common)
+#   1. Copies ../../project-template into ../../<project-name> (siblings of cognizelab-core)
 #   2. Strips the template's git history and starts a fresh repo
 #   3. Fills in PROJECT_NAME / <project-name> placeholders where easy to do safely
 #
 # Usage (run from anywhere):
-#   lab-common/shell/new_project.sh my-new-study
+#   cognizelab-core/shell/new_project.sh my-new-study
+#   cognizelab-core/shell/new_project.sh my-new-study some-other-org
 #
-# After this runs, create an empty repo on GitHub named <project-name> and:
+# Defaults to the "cognizelab" GitHub org. After this runs, create an empty
+# repo under that org named <project-name> and:
 #   cd ../<project-name>
-#   git remote add origin git@github.com:<username>/<project-name>.git
+#   git remote add origin git@github.com:cognizelab/<project-name>.git
 #   git push -u origin main
 
 set -euo pipefail
 
 if [ $# -lt 1 ]; then
-  echo "Usage: $0 <project-name> [github-username]" >&2
+  echo "Usage: $0 <project-name> [github-username-or-org]" >&2
   exit 1
 fi
 
 project_name="$1"
-github_user="${2:-<your-github-username>}"
+github_user="${2:-cognizelab}"
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-lab_common_dir="$(cd "$script_dir/.." && pwd)"      # .../GitHub/lab-common
-github_dir="$(dirname "$lab_common_dir")"           # .../GitHub
+cognizelab_core_dir="$(cd "$script_dir/.." && pwd)" # .../GitHub/cognizelab-core
+github_dir="$(dirname "$cognizelab_core_dir")"      # .../GitHub
 template_dir="$github_dir/project-template"
 target_dir="$github_dir/$project_name"
 

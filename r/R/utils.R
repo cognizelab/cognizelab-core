@@ -7,6 +7,6 @@
 #' @param x input value
 #' @return x, unchanged
 #' @export
-labcommon_placeholder <- function(x) {
+cognizelabcore_placeholder <- function(x) {
   x
 }
