@@ -1,0 +1,47 @@
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Editors ----
+.vscode/
+.idea/
+*.swp
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- R ----
+.Rhistory
+.RData
+.Rproj.user/
+*.Rout
+
+# ---- MATLAB ----
+*.asv
+*.m~
+slprj/
+*.mex*
+*.autosave
+
+# ---- Neuroimaging / data (should never live in a code repo) ----
+*.nii
+*.nii.gz
+*.dcm
+*.mat
+!matlab/**/*.mat        # allow small MATLAB *code-adjacent* fixtures if ever needed; remove this line if unused
+data/
+derivatives/
+sourcedata/

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "labcommon"
+version = "0.1.0"
+description = "Shared analysis utilities for lab fMRI/cognition projects"
+readme = "../README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Deniz" }]
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "nilearn",
+    "nibabel",
+    "nipype",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff", "black"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+line-length = 100
